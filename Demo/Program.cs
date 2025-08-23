@@ -126,19 +126,34 @@ namespace Demo
             #endregion
 
             #region Ex02
-            Employee E1 = new Employee(10, "martin", 5000);
-            Employee E2 = new Employee(10, "reda", 4000);
-            Employee E3 = new Employee(10, "pola", 7000);
+            //Employee E1 = new Employee(10, "martin", 5000);
+            //Employee E2 = new Employee(10, "reda", 4000);
+            //Employee E3 = new Employee(10, "pola", 7000);
 
-            SortedDictionary<Employee, string> sortedEmps = new SortedDictionary<Employee, string>()
-            {
-                [E1]="1st",
-                [E2]="2st",
-                [E3]="3st",
-            };
-            foreach (var item in sortedEmps)
-                Console.WriteLine( item);
+            //SortedDictionary<Employee, string> sortedEmps = new SortedDictionary<Employee, string>()
+            //{
+            //    [E1]="1st",
+            //    [E2]="2st",
+            //    [E3]="3st",
+            //};
+            //foreach (var item in sortedEmps)
+            //    Console.WriteLine( item);
             #endregion
+            #endregion
+
+            #region Generic Collection [Sorted list]
+            SortedList<string, int> SortedList = new SortedList<string, int>()
+            {
+                ["salma"]=222,
+                ["mai"]=444,
+                ["ali"]=555,
+                ["aya"]=666,
+            };
+            //acsses any element using index
+            Console.WriteLine(SortedList.GetValueAtIndex(0));//ali
+            Console.WriteLine(SortedList.GetKeyAtIndex(0));//ali after sorting
+            foreach(var item in SortedList)
+                Console.WriteLine( item);
             #endregion
         }
     }
