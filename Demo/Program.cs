@@ -92,20 +92,52 @@ namespace Demo
             #endregion
 
             #region Ex 02
+            //Employee E1 = new Employee(10, "martin", 5000);
+            //Employee E2 = new Employee(10, "reda", 4000);
+            //Employee E3 = new Employee(10, "pola", 7000);
+            //Dictionary<Employee, string> empolyees = new Dictionary<Employee, string>()
+            //{
+            //    [E1] = "1st",
+            //    [E2] = "2st",
+            //    [E3] = "2st",
+            //};
+            //Employee E4 = new Employee(20, "ewss", 14785);
+            //empolyees.Add(E4, "4St");
+            ////foreach(var item in empolyees)
+
+            ////    Console.WriteLine( item);
+            #endregion
+            #endregion
+
+            #region Genaric Collection [Sorted Dictionary]
+            #region Ex01
+            //SortedDictionary<string, int> phoneNote = new SortedDictionary<string, int>(new StringCompare)
+            //{
+            //    ["ahmed "] = 111,
+            //    ["menna "] = 417,
+            //    ["ramy "] = 4789,
+            //    ["Bassent "] = 471,
+            //    ["tarek "] = 974,
+            //};
+            ////by defualt sot asc 
+            ////Sort Desc
+            //foreach (var item in phoneNote)
+            //    Console.WriteLine( item);
+            #endregion
+
+            #region Ex02
             Employee E1 = new Employee(10, "martin", 5000);
             Employee E2 = new Employee(10, "reda", 4000);
             Employee E3 = new Employee(10, "pola", 7000);
-            Dictionary<Employee, string> empolyees = new Dictionary<Employee, string>()
-            {
-                [E1] = "1st",
-                [E2] = "2st",
-                [E3] = "2st",
-            };
-            Employee E4 = new Employee(20, "ewss", 14785);
-            empolyees.Add(E4, "4St");
-            //foreach(var item in empolyees)
 
-            //    Console.WriteLine( item);
+            SortedDictionary<Employee, string> sortedEmps = new SortedDictionary<Employee, string>()
+            {
+                [E1]="1st",
+                [E2]="2st",
+                [E3]="3st",
+            };
+            foreach (var item in sortedEmps)
+                Console.WriteLine( item);
             #endregion
             #endregion
         }
