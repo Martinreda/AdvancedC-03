@@ -142,18 +142,60 @@ namespace Demo
             #endregion
 
             #region Generic Collection [Sorted list]
-            SortedList<string, int> SortedList = new SortedList<string, int>()
-            {
-                ["salma"]=222,
-                ["mai"]=444,
-                ["ali"]=555,
-                ["aya"]=666,
-            };
-            //acsses any element using index
-            Console.WriteLine(SortedList.GetValueAtIndex(0));//ali
-            Console.WriteLine(SortedList.GetKeyAtIndex(0));//ali after sorting
-            foreach(var item in SortedList)
-                Console.WriteLine( item);
+            //SortedList<string, int> SortedList = new SortedList<string, int>()
+            //{
+            //    ["salma"]=222,
+            //    ["mai"]=444,
+            //    ["ali"]=555,
+            //    ["aya"]=666,
+            //};
+            ////acsses any element using index
+            //Console.WriteLine(SortedList.GetValueAtIndex(0));//ali
+            //Console.WriteLine(SortedList.GetKeyAtIndex(0));//ali after sorting
+            //foreach(var item in SortedList)
+            //    Console.WriteLine( item);
+            #endregion
+
+            #region Genaric Collection [Hashset]
+            /*
+             * onr of hash table algorithm
+             * hashset :_
+             * -<T>
+             * -record element without value 
+             * -check key [key must be unique]
+             * if exist => not added
+             * if not  => added
+             * 
+             */
+            #region Ex01
+            HashSet<int> Numbers = new HashSet<int>();
+            Numbers.Add(1);
+            Numbers.Add(2);
+            Numbers.Add(3);
+
+            Numbers.Add(1);
+            foreach (int i in Numbers)
+                Console.WriteLine(i);
+            #endregion
+            #region Ex02
+            //HashSet<Series> series = new HashSet<Series>()
+            //{
+            //    new Series(100 , "DOt", 1000),
+            //    new Series(200 , "dixter", 700),
+            //    new Series(300 , "viking", 200),
+            //};
+            //foreach (
+            //    Series s in series)
+            //    Console.WriteLine( s);
+            #endregion
+            #region HashSet Methods 
+            HashSet<int> set01 = new HashSet<int>() { 1, 2, 3, 4, 5 };
+            HashSet<int> set02 = new HashSet<int>() { 1, 2, 3, 4, 5,6,7,8,9,10 };
+            set02.ExceptWith(set01);
+
+            foreach(int i in set02)
+                Console.WriteLine(i);
+            #endregion
             #endregion
         }
     }
