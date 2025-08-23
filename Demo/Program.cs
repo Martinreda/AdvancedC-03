@@ -168,14 +168,14 @@ namespace Demo
              * 
              */
             #region Ex01
-            HashSet<int> Numbers = new HashSet<int>();
-            Numbers.Add(1);
-            Numbers.Add(2);
-            Numbers.Add(3);
+            //HashSet<int> Numbers = new HashSet<int>();
+            //Numbers.Add(1);
+            //Numbers.Add(2);
+            //Numbers.Add(3);
 
-            Numbers.Add(1);
-            foreach (int i in Numbers)
-                Console.WriteLine(i);
+            //Numbers.Add(1);
+            //foreach (int i in Numbers)
+            //    Console.WriteLine(i);
             #endregion
             #region Ex02
             //HashSet<Series> series = new HashSet<Series>()
@@ -189,13 +189,26 @@ namespace Demo
             //    Console.WriteLine( s);
             #endregion
             #region HashSet Methods 
-            HashSet<int> set01 = new HashSet<int>() { 1, 2, 3, 4, 5 };
-            HashSet<int> set02 = new HashSet<int>() { 1, 2, 3, 4, 5,6,7,8,9,10 };
-            set02.ExceptWith(set01);
+            //HashSet<int> set01 = new HashSet<int>() { 1, 2, 3, 4, 5 };
+            //HashSet<int> set02 = new HashSet<int>() { 1, 2, 3, 4, 5,6,7,8,9,10 };
+            //set02.ExceptWith(set01);
 
-            foreach(int i in set02)
-                Console.WriteLine(i);
+            //foreach(int i in set02)
+            //    Console.WriteLine(i);
             #endregion
+            #endregion
+
+            #region Genaric collection [sortedset]
+            SortedSet<int> Numbers = new SortedSet<int>(new IntgerCompare());
+            Numbers.Add(4);
+            Numbers.Add(8);
+            Numbers.Add(2);
+            Numbers.Add(6);
+            foreach(int i in Numbers)
+                Console.WriteLine( i);
+
+            Console.WriteLine(Numbers.Max);
+            Console.WriteLine(Numbers.Min);
             #endregion
         }
     }
